@@ -16,8 +16,8 @@ app.enable('trust proxy')
 // middlewares
 app.use(express.json())
 app.use(morgan('dev'))
-// app.use(helmet())
-// app.use(cors())
+app.use(helmet())
+app.use(cors())
 
 // routes
 app.use('/employees', require('./routes/employees'))
